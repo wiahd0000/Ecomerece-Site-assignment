@@ -45,3 +45,11 @@ btnview.addEventListener("click", ()=>{
 btnmore.addEventListener("click", ()=>{
   alert("viwing of product will soon be here")
 });
+
+// menus handl burger
+const navbar = document.getElementById("nav");
+const navbtn = document.getElementById("menus");
+
+navbtn.addEventListener("click", ()=>{
+  navbar.classList.toggle("active");
+});
