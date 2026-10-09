@@ -42,14 +42,34 @@ btnview.addEventListener("click", ()=>{
   alert("You can view later")
 });
 
-btnmore.addEventListener("click", ()=>{
-  alert("viwing of product will soon be here")
-});
+// another code
 
-// menus handl burger
 const navbar = document.getElementById("nav");
 const navbtn = document.getElementById("menus");
 
-navbtn.addEventListener("click", ()=>{
-  navbar.classList.toggle("active");
-});
+if (navbar && navbtn) {
+    navbtn.addEventListener("click", () => {
+        const isOpen = navbar.classList.toggle("active");
+        navbtn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navbar.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navbar.classList.remove("active");
+            navbtn.setAttribute("aria-expanded", "false");
+        });
+    });
+}
+
+
+// btnmore.addEventListener("click", ()=>{
+//   alert("viwing of product will soon be here")
+// });
+
+// // menus handl burger
+// const navbar = document.getElementById("nav");
+// const navbtn = document.getElementById("menus");
+
+// navbtn.addEventListener("click", ()=>{
+//   navbar.classList.toggle("active");
+// });
