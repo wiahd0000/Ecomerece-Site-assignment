@@ -60,3 +60,24 @@ if (navbar && navbtn) {
   });
 };
 
+// next one
+
+const cobtn = document.querySelectorAll("#co-btn");
+
+cobtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        alert("View more");
+    });
+});
+
+
+const btnview = document.getElementById("btn-view");
+btnview.addEventListener("click", ()=>{
+  alert("products will soon be avalible")
+});
+
+// collecion section
+const btnm = document.getElementById("btn-more");
+btnm.addEventListener("click", ()=>{
+  alert("see more collection")
+});
